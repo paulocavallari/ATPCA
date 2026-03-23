@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação ATPCA - Ciências e Matemática</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { background-color: #111827; margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; user-select: none; }
@@ -22,6 +24,7 @@
 </head>
 <body>
     <div id="presentation-wrapper">
+        <!-- Top Bar Colorida -->
         <div class="h-2 w-full flex shrink-0 fixed top-0 z-50">
             <div class="w-1/4 bg-blue-900"></div>
             <div class="w-1/4 bg-green-600"></div>
@@ -34,7 +37,7 @@
             <!-- SLIDE 1: Capa -->
             <div class="slide slide-active bg-gray-50 p-6 md:p-12 flex flex-col justify-between" id="slide-0">
                 <div class="mt-4 md:mt-0 z-10 relative">
-                    <h3 class="text-blue-900 font-bold tracking-widest text-xs md:text-sm mb-4 md:mb-6 uppercase">Formação Continuada - Exatas e Biológicas</h3>
+                    <h3 class="text-teal-700 font-bold tracking-widest text-xs md:text-sm mb-4 md:mb-6 uppercase">Formação Continuada - Exatas e Biológicas</h3>
                     <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-4 max-w-3xl">
                         A Importância do Ensino de Computação como Potencializador da Educação Básica
                     </h1>
@@ -46,29 +49,29 @@
                 </div>
 
                 <div class="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-96 h-96 opacity-30 md:opacity-100">
-                    <div class="absolute top-0 right-10 text-green-500"><i data-lucide="brain-circuit" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
+                    <div class="absolute top-0 right-10 text-teal-500"><i data-lucide="microscope" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
                     <div class="absolute top-10 right-40 text-blue-800"><i data-lucide="network" class="w-24 h-24 md:w-32 md:h-32 stroke-[1.5]"></i></div>
-                    <div class="absolute bottom-10 right-32 text-orange-500"><i data-lucide="git-branch" class="w-24 h-24 md:w-32 md:h-32 stroke-[1.5]"></i></div>
-                    <div class="absolute bottom-0 right-0 text-blue-500"><i data-lucide="layers" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
+                    <div class="absolute bottom-10 right-32 text-emerald-500"><i data-lucide="atom" class="w-24 h-24 md:w-32 md:h-32 stroke-[1.5]"></i></div>
+                    <div class="absolute bottom-0 right-0 text-cyan-600"><i data-lucide="flask-conical" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-6 md:gap-12 mt-8 md:mt-12 pt-6 border-t border-gray-200 pb-16 md:pb-0 z-10 relative bg-gray-50/80 backdrop-blur-sm sm:bg-transparent sm:backdrop-blur-none">
                     <div class="flex items-center gap-4">
-                        <div class="bg-blue-100 p-3 rounded-full text-blue-900"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                        <div class="bg-teal-100 p-3 rounded-full text-teal-700"><i data-lucide="clock" class="w-6 h-6"></i></div>
                         <div>
                             <p class="font-bold text-slate-800">Duração</p>
                             <p class="text-slate-600 text-sm">50 minutos por área</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="bg-blue-100 p-3 rounded-full text-blue-900"><i data-lucide="target" class="w-6 h-6"></i></div>
+                        <div class="bg-teal-100 p-3 rounded-full text-teal-700"><i data-lucide="target" class="w-6 h-6"></i></div>
                         <div>
                             <p class="font-bold text-slate-800">Público</p>
                             <p class="text-slate-600 text-sm">Prof. Ciências e Mat.</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="bg-blue-100 p-3 rounded-full text-blue-900"><i data-lucide="calendar" class="w-6 h-6"></i></div>
+                        <div class="bg-teal-100 p-3 rounded-full text-teal-700"><i data-lucide="calendar" class="w-6 h-6"></i></div>
                         <div>
                             <p class="font-bold text-slate-800">Data</p>
                             <p class="text-slate-600 text-sm">24 de Março de 2026</p>
@@ -83,16 +86,16 @@
                     <div class="w-full lg:w-1/3 flex flex-col justify-center">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-2">Abertura e Boas-vindas</h2>
                         <p class="text-slate-600 mb-6 font-medium text-base md:text-lg">O que é Ensino de Computação?</p>
-                        <div class="bg-blue-50 rounded-2xl p-5 md:p-6 border-l-4 border-blue-900">
+                        <div class="bg-teal-50 rounded-2xl p-5 md:p-6 border-l-4 border-teal-600">
                             <p class="text-slate-700 mb-6 text-sm md:text-base">Desmistificando o tema para além dos laboratórios de informática na URE Bauru.</p>
                             <div class="space-y-4">
                                 <div class="flex gap-3 items-start">
-                                    <i data-lucide="help-circle" class="w-6 h-6 text-blue-900 flex-shrink-0 mt-1"></i>
-                                    <p class="text-slate-800 font-semibold text-base md:text-lg">Onde poderíamos chegar se não fossemos alfabetizados?</p>
+                                    <i data-lucide="help-circle" class="w-6 h-6 text-teal-600 flex-shrink-0 mt-1"></i>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">Onde poderíamos chegar se não fôssemos alfabetizados?</p>
                                 </div>
                                 <div class="flex gap-3 items-start">
-                                    <i data-lucide="help-circle" class="w-6 h-6 text-blue-900 flex-shrink-0 mt-1"></i>
-                                    <p class="text-slate-800 font-semibold text-base md:text-lg">E se não fossemos letrados digitalmente?</p>
+                                    <i data-lucide="help-circle" class="w-6 h-6 text-teal-600 flex-shrink-0 mt-1"></i>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">E se não fôssemos letrados digitalmente?</p>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +103,7 @@
                     <div class="w-full lg:w-2/3 flex flex-col justify-center lg:pl-8">
                         <div class="mb-8 md:mb-10">
                             <h2 class="text-xl md:text-2xl font-bold text-slate-800 flex items-center gap-3 mb-4">
-                                <i data-lucide="monitor-play" class="text-blue-900 w-6 h-6 md:w-8 md:h-8"></i> Computação na Escola
+                                <i data-lucide="monitor-play" class="text-teal-600 w-6 h-6 md:w-8 md:h-8"></i> Computação na Escola
                             </h2>
                             <p class="text-slate-600 text-lg md:text-xl leading-relaxed">
                                 Não é apenas ensinar a usar o Word ou Excel. É um conjunto de conhecimentos, práticas e valores que permitem ao aluno <strong>compreender, utilizar e criar</strong> tecnologias digitais de forma crítica.
@@ -108,16 +111,16 @@
                         </div>
                         <div>
                             <h2 class="text-xl md:text-2xl font-bold text-slate-800 flex items-center gap-3 mb-4">
-                                <i data-lucide="brain-circuit" class="text-orange-600 w-6 h-6 md:w-8 md:h-8"></i> O Pensamento Computacional
+                                <i data-lucide="brain-circuit" class="text-teal-600 w-6 h-6 md:w-8 md:h-8"></i> O Pensamento Computacional
                             </h2>
                             <p class="text-slate-600 text-lg md:text-xl mb-6 leading-relaxed">
                                 Não significa "pensar como um computador", mas sim usar os conceitos da Ciência da Computação para resolver problemas em qualquer área.
                             </p>
-                            <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 md:p-5 relative shadow-sm">
-                                <p class="text-orange-900 text-base md:text-lg italic font-medium">
+                            <div class="bg-teal-50 border border-teal-200 rounded-xl p-4 md:p-5 relative shadow-sm">
+                                <p class="text-teal-900 text-base md:text-lg italic font-medium">
                                     "O pensamento computacional é um processo cognitivo para formulação e resolução de problemas..."
                                 </p>
-                                <p class="text-right text-orange-700 font-bold mt-2 text-xs md:text-sm">— Jeannette Wing (2006)</p>
+                                <p class="text-right text-teal-700 font-bold mt-2 text-xs md:text-sm">— Jeannette Wing (2006)</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +138,7 @@
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
-                                    <div class="text-blue-900"><i data-lucide="layout-template" class="w-6 h-6 md:w-8 md:h-8"></i></div>
+                                    <div class="text-teal-600"><i data-lucide="layout-template" class="w-6 h-6 md:w-8 md:h-8"></i></div>
                                     <h3 class="text-xl md:text-2xl font-bold text-slate-800">Decomposição</h3>
                                 </div>
                                 <span class="text-4xl md:text-5xl font-bold text-gray-100 leading-none">1</span>
@@ -145,7 +148,7 @@
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
-                                    <div class="text-green-600"><i data-lucide="target" class="w-6 h-6 md:w-8 md:h-8"></i></div>
+                                    <div class="text-teal-600"><i data-lucide="target" class="w-6 h-6 md:w-8 md:h-8"></i></div>
                                     <h3 class="text-xl md:text-2xl font-bold text-slate-800">Reconhecimento de Padrões</h3>
                                 </div>
                                 <span class="text-4xl md:text-5xl font-bold text-gray-100 leading-none">2</span>
@@ -155,7 +158,7 @@
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
-                                    <div class="text-orange-500"><i data-lucide="lightbulb" class="w-6 h-6 md:w-8 md:h-8"></i></div>
+                                    <div class="text-teal-600"><i data-lucide="lightbulb" class="w-6 h-6 md:w-8 md:h-8"></i></div>
                                     <h3 class="text-xl md:text-2xl font-bold text-slate-800">Abstração</h3>
                                 </div>
                                 <span class="text-4xl md:text-5xl font-bold text-gray-100 leading-none">3</span>
@@ -165,7 +168,7 @@
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
-                                    <div class="text-blue-500"><i data-lucide="code-2" class="w-6 h-6 md:w-8 md:h-8"></i></div>
+                                    <div class="text-teal-600"><i data-lucide="code-2" class="w-6 h-6 md:w-8 md:h-8"></i></div>
                                     <h3 class="text-xl md:text-2xl font-bold text-slate-800">Algoritmos</h3>
                                 </div>
                                 <span class="text-4xl md:text-5xl font-bold text-gray-100 leading-none">4</span>
@@ -176,7 +179,7 @@
                 </div>
             </div>
 
-            <!-- SLIDE 4: Dados -->
+            <!-- SLIDE 4: Dados Atuais -->
             <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-3">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-4 shrink-0">
@@ -240,8 +243,56 @@
                 </div>
             </div>
 
-            <!-- SLIDE 5: BNCC -->
-            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-4">
+            <!-- SLIDE 5: Cenário de 2025 (Novo Slide) -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-4">
+                <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
+                    <div class="mb-6 shrink-0">
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">O Cenário Atual: Dados de 2025</h2>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-end mt-1 gap-2">
+                            <p class="text-slate-600 text-base md:text-lg">A infraestrutura chegou. O gargalo agora é a integração pedagógica.</p>
+                            <div class="flex items-center gap-2 text-xs md:text-sm text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded-full">
+                                <i data-lucide="bar-chart-horizontal" class="w-4 h-4"></i> Dados: CIEB & Cetic.br (2025)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-6 flex-1 min-h-0">
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="wifi" class="text-green-500 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">97%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">Infraestrutura e Conectividade</p>
+                            <p class="text-slate-600 text-sm md:text-base">Das escolas da rede possuem banda larga e laboratórios instalados (Avanço significativo no pós-pandemia até 2025).</p>
+                        </div>
+
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-teal-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="split-square-horizontal" class="text-teal-500 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">28%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">O Gargalo da Integração</p>
+                            <p class="text-slate-600 text-sm md:text-base">Apenas 28% dos projetos de tecnologia nas escolas dialogam diretamente com os currículos de outras disciplinas (Matemática, Ciências, etc).</p>
+                        </div>
+
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="brain-circuit" class="text-blue-600 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">65%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">Demanda do Mercado (2025)</p>
+                            <p class="text-slate-600 text-sm md:text-base">Das novas vagas exigem não apenas o uso da tecnologia, mas habilidades de "resolução de problemas complexos" via IA e automação.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-slate-800 text-white p-5 rounded-xl flex items-start sm:items-center gap-4 shrink-0 shadow-lg border-l-4 border-teal-500">
+                        <i data-lucide="target" class="w-8 h-8 text-teal-400 flex-shrink-0 mt-1 sm:mt-0"></i>
+                        <div>
+                            <p class="text-base md:text-lg"><strong>Nossa Meta:</strong> Virar o jogo dos 28%. A tecnologia não pode ser uma "ilha" cercada por um currículo tradicional. Ela deve permear a nossa análise do mundo natural e matemático.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 6: BNCC -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-5">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="text-center mb-6 shrink-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">Fundamentos: BNCC e Construcionismo</h2>
@@ -309,8 +360,8 @@
                 </div>
             </div>
 
-            <!-- SLIDE 6: Potencializador -->
-            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-5">
+            <!-- SLIDE 7: Potencializador (Geral) -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-6">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-6 shrink-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">O Ensino de Computação como Potencializador</h2>
@@ -349,8 +400,8 @@
                 </div>
             </div>
 
-            <!-- SLIDE 7: CIÊNCIAS E MATEMÁTICA -->
-            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-6">
+            <!-- SLIDE 8: CIÊNCIAS E MATEMÁTICA -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-7">
                 <div class="max-w-7xl mx-auto w-full h-full flex flex-col lg:flex-row gap-8 pb-16 md:pb-0">
                     <div class="w-full lg:w-1/3 flex flex-col justify-center">
                         <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-5 leading-tight">Computação como<br><span class="text-teal-600">Potencializador</span><br>da Ciência e Mat.</h2>
@@ -393,8 +444,8 @@
                 </div>
             </div>
 
-            <!-- SLIDE 8: Atividade Interativa CIÊNCIAS E MAT. -->
-            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-7">
+            <!-- SLIDE 9: Atividade Interativa -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-8">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-4 flex items-center gap-3 shrink-0">
                         <div class="bg-teal-100 p-2 rounded-lg shrink-0"><i data-lucide="bug" class="text-teal-600 w-5 h-5 md:w-6 md:h-6"></i></div>
@@ -491,8 +542,8 @@
                 </div>
             </div>
 
-            <!-- SLIDE 9: Fechamento -->
-            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-8">
+            <!-- SLIDE 10: Fechamento -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-9">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-6 md:mb-8 shrink-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">Fechamento e Próximos Passos</h2>
@@ -562,13 +613,9 @@
 
         <div id="controls-overlay">
             <div class="bg-black/80 text-white px-4 md:px-6 py-2 md:py-3 rounded-full flex items-center gap-4 md:gap-8 backdrop-blur-md shadow-2xl border border-white/10">
-                <button onclick="prevSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-prev">
-                    <i data-lucide="chevron-left" class="w-6 h-6 md:w-8 md:h-8"></i>
-                </button>
-                <span class="text-sm md:text-lg font-medium tracking-widest text-gray-300 w-12 md:w-16 text-center select-none" id="slide-counter">1 / 9</span>
-                <button onclick="nextSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-next">
-                    <i data-lucide="chevron-right" class="w-6 h-6 md:w-8 md:h-8"></i>
-                </button>
+                <button onclick="prevSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-prev"><i data-lucide="chevron-left" class="w-6 h-6 md:w-8 md:h-8"></i></button>
+                <span class="text-sm md:text-lg font-medium tracking-widest text-gray-300 w-12 md:w-16 text-center select-none" id="slide-counter">1 / 10</span>
+                <button onclick="nextSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-next"><i data-lucide="chevron-right" class="w-6 h-6 md:w-8 md:h-8"></i></button>
             </div>
         </div>
     </div>
@@ -576,7 +623,7 @@
     <script>
         lucide.createIcons();
         let currentSlide = 0;
-        const totalSlides = 9;
+        const totalSlides = 10;
 
         function updateSlides() {
             for(let i = 0; i < totalSlides; i++) {
@@ -597,11 +644,7 @@
 
         function nextSlide() { if (currentSlide < totalSlides - 1) { currentSlide++; updateSlides(); } }
         function prevSlide() { if (currentSlide > 0) { currentSlide--; updateSlides(); } }
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-        });
+        window.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide(); if (e.key === 'ArrowLeft') prevSlide(); });
 
         let timerInterval;
         let initialTimeLeft = 600; 
@@ -611,14 +654,8 @@
         const timerBtn = document.getElementById('timer-btn');
         const timerEditBtn = document.getElementById('timer-edit-btn');
 
-        function formatTime(seconds) {
-            const m = Math.floor(seconds / 60);
-            const s = seconds % 60;
-            return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-        }
-
+        function formatTime(seconds) { const m = Math.floor(seconds / 60); const s = seconds % 60; return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`; }
         function updateTimerDisplay() { if(timerDisplay) timerDisplay.innerText = formatTime(timeLeft); }
-
         function editTimer() {
             if (isTimerRunning) return;
             const currentMins = Math.floor(initialTimeLeft / 60);
@@ -638,14 +675,11 @@
                     setTimeout(() => {
                         const osc = ctx.createOscillator();
                         const gainNode = ctx.createGain();
-                        osc.type = 'triangle'; 
-                        osc.frequency.setValueAtTime(600, ctx.currentTime);
+                        osc.type = 'triangle'; osc.frequency.setValueAtTime(600, ctx.currentTime);
                         gainNode.gain.setValueAtTime(0.5, ctx.currentTime);
                         gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
-                        osc.connect(gainNode);
-                        gainNode.connect(ctx.destination);
-                        osc.start();
-                        osc.stop(ctx.currentTime + 0.5);
+                        osc.connect(gainNode); gainNode.connect(ctx.destination);
+                        osc.start(); osc.stop(ctx.currentTime + 0.5);
                     }, i * 500);
                 }
             } catch(e) { console.log("Áudio não suportado."); }
@@ -655,18 +689,13 @@
             if (isTimerRunning) {
                 clearInterval(timerInterval);
                 isTimerRunning = false;
-                if(timerBtn) timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar';
-                if(timerBtn) timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
+                if(timerBtn) { timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar'; timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md'; }
                 if(timerEditBtn) timerEditBtn.style.display = 'block';
             } else {
                 isTimerRunning = true;
-                if(timerBtn) timerBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 md:w-5 md:h-5"></i> Pausar';
-                if(timerBtn) timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
+                if(timerBtn) { timerBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 md:w-5 md:h-5"></i> Pausar'; timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md'; }
                 if(timerEditBtn) timerEditBtn.style.display = 'none'; 
-                timerInterval = setInterval(() => {
-                    if (timeLeft > 0) { timeLeft--; updateTimerDisplay(); } 
-                    else { toggleTimer(); playAlarm(); }
-                }, 1000);
+                timerInterval = setInterval(() => { if (timeLeft > 0) { timeLeft--; updateTimerDisplay(); } else { toggleTimer(); playAlarm(); } }, 1000);
             }
             lucide.createIcons();
         }
@@ -676,8 +705,7 @@
             isTimerRunning = false;
             timeLeft = initialTimeLeft; 
             updateTimerDisplay();
-            if(timerBtn) timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar';
-            if(timerBtn) timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
+            if(timerBtn) { timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar'; timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md'; }
             if(timerEditBtn) timerEditBtn.style.display = 'block';
             lucide.createIcons();
         }
