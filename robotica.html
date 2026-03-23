@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação OT - Robótica 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background-color: #111827;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            user-select: none;
+        }
+        #presentation-wrapper {
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide {
+            position: absolute;
+            top: 0.5rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: opacity 0.3s ease-in-out;
+            background-color: white;
+            overflow-y: auto; 
+            overflow-x: hidden;
+        }
+        .slide-active {
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+        }
+        .slide-hidden {
+            opacity: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        #controls-overlay {
+            position: fixed;
+            bottom: 1rem;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        #controls-overlay:hover {
+            opacity: 1;
+        }
+        .slide::-webkit-scrollbar { width: 8px; }
+        .slide::-webkit-scrollbar-track { background: #f1f5f9; }
+        .slide::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .slide::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <div id="presentation-wrapper">
+        <!-- Top Bar Colorida -->
+        <div class="h-2 w-full flex shrink-0 fixed top-0 z-50">
+            <div class="w-1/4 bg-blue-900"></div>
+            <div class="w-1/4 bg-green-600"></div>
+            <div class="w-1/4 bg-yellow-500"></div>
+            <div class="w-1/4 bg-red-600"></div>
+        </div>
+
+        <!-- Área dos Slides -->
+        <div class="flex-1 relative w-full h-full" id="slides-container">
+            
+            <!-- SLIDE 1: Capa -->
+            <div class="slide slide-active bg-gray-50 p-6 md:p-12 flex flex-col justify-between" id="slide-0">
+                <div class="mt-4 md:mt-0 z-10 relative">
+                    <h3 class="text-orange-700 font-bold tracking-widest text-xs md:text-sm mb-4 md:mb-6 uppercase">Orientação Técnica 2026</h3>
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-4 max-w-3xl">
+                        A Intencionalidade Pedagógica e o Ensino de Computação "Mão na Massa"
+                    </h1>
+                    <div class="flex items-center text-red-700 font-semibold text-base md:text-lg border-l-4 border-red-700 pl-3">
+                        <i data-lucide="cpu" class="w-5 h-5 mr-2 shrink-0"></i>
+                        <span>Professores de Robótica - URE Bauru</span>
+                    </div>
+                    <p class="text-slate-500 mt-4 text-base md:text-lg">URE Bauru, SP</p>
+                </div>
+
+                <!-- Abstract Graphic -->
+                <div class="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-96 h-96 opacity-30 md:opacity-100">
+                    <div class="absolute top-0 right-10 text-orange-500"><i data-lucide="cpu" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
+                    <div class="absolute top-10 right-40 text-blue-800"><i data-lucide="network" class="w-24 h-24 md:w-32 md:h-32 stroke-[1.5]"></i></div>
+                    <div class="absolute bottom-10 right-32 text-orange-600"><i data-lucide="zap" class="w-24 h-24 md:w-32 md:h-32 stroke-[1.5]"></i></div>
+                    <div class="absolute bottom-0 right-0 text-slate-500"><i data-lucide="layers" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6 md:gap-12 mt-8 md:mt-12 pt-6 border-t border-gray-200 pb-16 md:pb-0 z-10 relative bg-gray-50/80 backdrop-blur-sm sm:bg-transparent sm:backdrop-blur-none">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-orange-100 p-3 rounded-full text-orange-700"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                        <div>
+                            <p class="font-bold text-slate-800">Duração</p>
+                            <p class="text-slate-600 text-sm">Apresentação Expositiva</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-orange-100 p-3 rounded-full text-orange-700"><i data-lucide="target" class="w-6 h-6"></i></div>
+                        <div>
+                            <p class="font-bold text-slate-800">Público</p>
+                            <p class="text-slate-600 text-sm">Prof. Especialistas (Robótica)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-orange-100 p-3 rounded-full text-orange-700"><i data-lucide="calendar" class="w-6 h-6"></i></div>
+                        <div>
+                            <p class="font-bold text-slate-800">Data</p>
+                            <p class="text-slate-600 text-sm">27 de Março de 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Introdução (O Desafio do Especialista) -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col justify-center" id="slide-1">
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-7xl mx-auto w-full pb-16 md:pb-0">
+                    <div class="w-full lg:w-1/3 flex flex-col justify-center">
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-2">Para além dos cabos e motores</h2>
+                        <p class="text-slate-600 mb-6 font-medium text-base md:text-lg">O Desafio do Professor Especialista</p>
+                        
+                        <div class="bg-orange-50 rounded-2xl p-5 md:p-6 border-l-4 border-orange-600">
+                            <p class="text-slate-700 mb-6 text-sm md:text-base">Vocês já dominam o "como fazer". O foco hoje é o <strong>impacto curricular</strong>.</p>
+                            <div class="space-y-4">
+                                <div class="flex gap-3 items-start">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-orange-600 flex-shrink-0 mt-1"></i>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">Como a robótica sai do isolamento do laboratório?</p>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-orange-600 flex-shrink-0 mt-1"></i>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">Como podemos ser o eixo de inovação para as outras disciplinas?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 flex flex-col justify-center lg:pl-8">
+                        <div class="mb-8 md:mb-10">
+                            <h2 class="text-xl md:text-2xl font-bold text-slate-800 flex items-center gap-3 mb-4">
+                                <i data-lucide="layers" class="text-blue-900 w-6 h-6 md:w-8 md:h-8"></i> O Professor como Integrador
+                            </h2>
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed">
+                                O ensino de computação na Educação Básica não visa formar apenas engenheiros de software. Visa formar cidadãos capazes de usar a tecnologia de forma crítica. O professor de robótica é o <strong>tradutor</strong> dessa linguagem para toda a escola.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-800 rounded-2xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden">
+                            <div class="absolute right-0 top-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                                <i data-lucide="bot" class="w-48 h-48"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center gap-2 text-orange-400">
+                                <i data-lucide="zap" class="w-5 h-5"></i> Mudança de Paradigma
+                            </h3>
+                            <p class="text-base md:text-lg text-slate-300 leading-relaxed">
+                                A aula de robótica mais efetiva não é aquela onde o robô funciona perfeitamente seguindo um manual, mas sim aquela onde o aluno usou o robô para resolver um <strong>problema real</strong> levantado na aula de Ciências, Geografia ou Artes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Dados de 2025 -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-2">
+                <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
+                    <div class="mb-6 shrink-0">
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">O Cenário Atual: Dados de 2025</h2>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-end mt-1 gap-2">
+                            <p class="text-slate-600 text-base md:text-lg">A infraestrutura chegou. O gargalo agora é a integração pedagógica.</p>
+                            <div class="flex items-center gap-2 text-xs md:text-sm text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded-full">
+                                <i data-lucide="bar-chart-horizontal" class="w-4 h-4"></i> Dados: CIEB & Cetic.br (2025)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-6 flex-1 min-h-0">
+                        <!-- Dado 1 -->
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="wifi" class="text-green-500 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">97%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">Infraestrutura e Conectividade</p>
+                            <p class="text-slate-600 text-sm md:text-base">Das escolas da rede possuem banda larga e laboratórios/kits de robótica instalados (Avanço significativo no pós-pandemia até 2025).</p>
+                        </div>
+
+                        <!-- Dado 2 -->
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="split-square-horizontal" class="text-orange-500 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">28%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">O Gargalo da Integração</p>
+                            <p class="text-slate-600 text-sm md:text-base">Apenas 28% dos projetos de robótica nas escolas dialogam diretamente com os currículos de outras disciplinas (Matemática, História, etc).</p>
+                        </div>
+
+                        <!-- Dado 3 -->
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="brain-circuit" class="text-blue-600 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">65%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">Demanda do Mercado (2025)</p>
+                            <p class="text-slate-600 text-sm md:text-base">Das novas vagas de emprego exigem não apenas o uso da tecnologia, mas habilidades de "resolução de problemas complexos" via IA e automação.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-slate-800 text-white p-5 rounded-xl flex items-start sm:items-center gap-4 shrink-0 shadow-lg border-l-4 border-orange-500">
+                        <i data-lucide="target" class="w-8 h-8 text-orange-400 flex-shrink-0 mt-1 sm:mt-0"></i>
+                        <div>
+                            <p class="text-base md:text-lg"><strong>Nossa Meta:</strong> Virar o jogo dos 28%. A robótica não pode ser uma "ilha" de tecnologia cercada por um currículo tradicional. Ela deve permear as três grandes áreas do conhecimento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: Potencializando HUMANAS -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-3">
+                <div class="max-w-7xl mx-auto w-full h-full flex flex-col lg:flex-row gap-8 pb-16 md:pb-0">
+                    <div class="w-full lg:w-1/3 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-5 leading-tight">Robótica nas<br><span class="text-blue-600">Ciências Humanas</span></h2>
+                        <p class="text-slate-600 mb-6 text-base md:text-lg">Conectando hardware com análise social, histórica e geográfica.</p>
+                        
+                        <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-gray-200 mb-6 hidden md:block">
+                            <div class="text-blue-600 font-bold text-base md:text-lg mb-2 md:mb-3 border-b-2 border-blue-100 pb-2">O Papel do Especialista</div>
+                            <p class="text-slate-700 text-sm md:text-base">
+                                Ajudar o professor de Humanas a transformar debates teóricos em análise de sistemas e algoritmos do mundo real.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 flex flex-col justify-center gap-4 md:gap-6">
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-blue-500 flex items-start gap-4">
+                            <i data-lucide="map" class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Cidades Inteligentes e Geopolítica <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Geografia)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">A criação de semáforos inteligentes ou lixeiras automatizadas no laboratório serve como base para debater infraestrutura urbana, sustentabilidade e gestão pública nos bairros da URE Bauru.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-orange-500 flex items-start gap-4">
+                            <i data-lucide="shield-alert" class="w-8 h-8 md:w-10 md:h-10 text-orange-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Ética Algorítmica e IA <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Sociologia/Filosofia)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">Quando programamos o robô para tomar uma "decisão", introduzimos o conceito de viés de máquina. Debater como sistemas de IA reproduzem preconceitos sociais em recrutamentos ou segurança pública.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-green-600 flex items-start gap-4">
+                            <i data-lucide="briefcase" class="w-8 h-8 md:w-10 md:h-10 text-green-600 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Impacto no Mundo do Trabalho <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(História)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">Analisar a Revolução 5.0. O laboratório de robótica é a prova viva da automação. Como as aulas de História preparam o aluno para as novas relações trabalhistas ("uberização", substituição de mão de obra)?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: Potencializando LINGUAGENS -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-4">
+                <div class="max-w-7xl mx-auto w-full h-full flex flex-col lg:flex-row gap-8 pb-16 md:pb-0">
+                    <div class="w-full lg:w-1/3 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-5 leading-tight">Robótica nas<br><span class="text-purple-600">Linguagens & Artes</span></h2>
+                        <p class="text-slate-600 mb-6 text-base md:text-lg">O código como expressão artística e gramática universal.</p>
+                        
+                        <div class="bg-purple-50 p-4 md:p-6 rounded-2xl shadow-sm border border-purple-200 mb-6 hidden md:block">
+                            <div class="text-purple-700 font-bold text-base md:text-lg mb-2 md:mb-3 border-b-2 border-purple-200 pb-2">O Papel do Especialista</div>
+                            <p class="text-purple-900 text-sm md:text-base">
+                                Desmistificar para os colegas de Linguagens que a programação não é apenas matemática, mas pura sintaxe, coerência e comunicação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 flex flex-col justify-center gap-4 md:gap-6">
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-purple-600 flex items-start gap-4">
+                            <i data-lucide="code" class="w-8 h-8 md:w-10 md:h-10 text-purple-600 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">O Código como Nova Gramática <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Português)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">A computação tem sintaxe (regras de escrita) e semântica (significado). Programar exige um rigor absurdo de <strong>coesão e coerência textual</strong>. O compilador oferece feedback imediato de leitura.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-pink-500 flex items-start gap-4">
+                            <i data-lucide="palette" class="w-8 h-8 md:w-10 md:h-10 text-pink-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Arte Generativa e Multimídia <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Artes)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">Utilizar matrizes de LEDs, displays LCD ou braços robóticos mecânicos para criar expressões artísticas visuais. A estética gerada por algoritmos (Creative Coding).</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-indigo-500 flex items-start gap-4">
+                            <i data-lucide="message-square-dashed" class="w-8 h-8 md:w-10 md:h-10 text-indigo-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Engenharia de Prompt e Letramento <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Linguagens)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">No cenário pós-2025 com IA Generativa, o foco das aulas de redação abrange a <strong>Engenharia de Comando (Prompt)</strong> e o letramento midiático na identificação de textos gerados por máquinas e deep fakes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 6: Potencializando CIÊNCIAS/MAT -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-5">
+                <div class="max-w-7xl mx-auto w-full h-full flex flex-col lg:flex-row gap-8 pb-16 md:pb-0">
+                    <div class="w-full lg:w-1/3 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-5 leading-tight">Robótica nas<br><span class="text-teal-600">Ciências da Natureza & Mat.</span></h2>
+                        <p class="text-slate-600 mb-6 text-base md:text-lg">Transformando teorias abstratas em medições físicas e tangíveis.</p>
+                        
+                        <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-gray-200 mb-6 hidden md:block">
+                            <div class="text-teal-600 font-bold text-base md:text-lg mb-2 md:mb-3 border-b-2 border-teal-100 pb-2">O Papel do Especialista</div>
+                            <p class="text-slate-700 text-sm md:text-base">
+                                Fornecer as ferramentas para que o laboratório de biologia ou física se torne um hub de coleta de dados em tempo real.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 flex flex-col justify-center gap-4 md:gap-6">
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-teal-500 flex items-start gap-4">
+                            <i data-lucide="thermometer" class="w-8 h-8 md:w-10 md:h-10 text-teal-600 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Coleta de Dados em Tempo Real <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Física/Química)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">Em vez de apenas ler sobre umidade ou temperatura em livros, os alunos usam sensores (como DHT11/Ultrassônico) conectados a microcontroladores para registrar fenômenos e gerar tabelas exportáveis.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-emerald-500 flex items-start gap-4">
+                            <i data-lucide="bar-chart-3" class="w-8 h-8 md:w-10 md:h-10 text-emerald-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Ciência de Dados no Cotidiano <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Matemática)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">A Matemática ganha propósito: pegar a base de dados gerada pelo robô e criar scripts simples ou gráficos dinâmicos em planilhas para analisar, por exemplo, fatores climáticos locais.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border-l-8 border-cyan-600 flex items-start gap-4">
+                            <i data-lucide="bug" class="w-8 h-8 md:w-10 md:h-10 text-cyan-600 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-2">Método Científico = Algoritmo <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded ml-2">(Ciências)</span></h3>
+                                <p class="text-slate-600 text-sm md:text-base">Mostrar a simetria absoluta: Levantar hipóteses e testá-las no Método Científico é o mesmo processo mental de programar, executar um código e fazer a <strong>depuração (debug)</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 7: O HUB DA ESCOLA -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-6">
+                <div class="max-w-7xl mx-auto w-full h-full flex flex-col items-center justify-center text-center pb-16 md:pb-0">
+                    <div class="mb-10 relative">
+                        <div class="absolute inset-0 bg-orange-100 blur-3xl opacity-50 rounded-full"></div>
+                        <i data-lucide="network" class="w-24 h-24 md:w-32 md:h-32 text-orange-600 mx-auto relative z-10"></i>
+                    </div>
+                    
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6 leading-tight max-w-4xl">
+                        O Professor de Robótica como <br><span class="text-orange-600">Hub de Inovação Pedagógica</span>
+                    </h2>
+                    
+                    <p class="text-lg md:text-2xl text-slate-600 max-w-3xl leading-relaxed mb-12">
+                        Vocês detêm a linguagem que o futuro exige. A missão em 2026 não é apenas formar equipes para torneios de robótica, mas democratizar o pensamento computacional em 100% das salas de aula.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+                        <div class="bg-white border-2 border-slate-100 rounded-2xl p-6 shadow-md hover:border-orange-300 transition-colors">
+                            <i data-lucide="users" class="w-8 h-8 text-blue-500 mb-4 mx-auto"></i>
+                            <h4 class="font-bold text-slate-800 mb-2">Articulação</h4>
+                            <p class="text-slate-600 text-sm">Sentar com os colegas e mapear onde o hardware pode facilitar o ensino deles.</p>
+                        </div>
+                        <div class="bg-white border-2 border-slate-100 rounded-2xl p-6 shadow-md hover:border-orange-300 transition-colors">
+                            <i data-lucide="wrench" class="w-8 h-8 text-green-500 mb-4 mx-auto"></i>
+                            <h4 class="font-bold text-slate-800 mb-2">Instrumentalização</h4>
+                            <p class="text-slate-600 text-sm">Disponibilizar sensores e kits de forma acessível para experiências simples.</p>
+                        </div>
+                        <div class="bg-white border-2 border-slate-100 rounded-2xl p-6 shadow-md hover:border-orange-300 transition-colors">
+                            <i data-lucide="lightbulb" class="w-8 h-8 text-yellow-500 mb-4 mx-auto"></i>
+                            <h4 class="font-bold text-slate-800 mb-2">Desmistificação</h4>
+                            <p class="text-slate-600 text-sm">Provar que a programação é apenas uma forma estruturada de resolver problemas lógicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 8: Fechamento -->
+            <div class="slide slide-hidden bg-slate-900 p-6 md:p-12 flex flex-col justify-center items-center text-center" id="slide-7">
+                <div class="max-w-4xl mx-auto w-full pb-16 md:pb-0">
+                    <i data-lucide="cpu" class="w-16 h-16 md:w-20 md:h-20 text-orange-500 mx-auto mb-8 opacity-80"></i>
+                    
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                        Próximo Passo: Planejamento Integrado
+                    </h2>
+                    
+                    <p class="text-lg md:text-xl text-slate-300 mb-12 leading-relaxed">
+                        Nesta OT, o desafio para vocês, especialistas, é buscar <strong>um professor de uma área distante da tecnologia</strong> (História, Artes ou Português) e desenhar um micro-projeto onde um sensor ou um código simples fará a diferença na aula dele.
+                    </p>
+
+                    <div class="inline-block bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 backdrop-blur-md">
+                        <p class="text-white text-lg md:text-xl font-medium mb-2">"A tecnologia só transforma a educação quando ela se torna invisível, e o aprendizado, visível."</p>
+                        <p class="text-orange-400 text-sm font-bold uppercase tracking-widest">Bom trabalho, Equipe URE Bauru!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /Área dos Slides -->
+
+        <!-- Overlay Navigation Controls -->
+        <div id="controls-overlay">
+            <div class="bg-black/80 text-white px-4 md:px-6 py-2 md:py-3 rounded-full flex items-center gap-4 md:gap-8 backdrop-blur-md shadow-2xl border border-white/10">
+                <button onclick="prevSlide()" class="hover:text-orange-400 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-prev">
+                    <i data-lucide="chevron-left" class="w-6 h-6 md:w-8 md:h-8"></i>
+                </button>
+                <span class="text-sm md:text-lg font-medium tracking-widest text-gray-300 w-12 md:w-16 text-center select-none" id="slide-counter">
+                    1 / 8
+                </span>
+                <button onclick="nextSlide()" class="hover:text-orange-400 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-next">
+                    <i data-lucide="chevron-right" class="w-6 h-6 md:w-8 md:h-8"></i>
+                </button>
+            </div>
+        </div>
+    </div> <!-- /presentation-wrapper -->
+
+    <script>
+        // Inicializa ícones Lucide
+        lucide.createIcons();
+
+        // Lógica de Slides
+        let currentSlide = 0;
+        const totalSlides = 8; // Ajustado para 8 slides
+
+        function updateSlides() {
+            for(let i = 0; i < totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                if (i === currentSlide) {
+                    slide.classList.remove('slide-hidden');
+                    slide.classList.add('slide-active');
+                    // Rola pro topo suavemente quando muda de slide
+                    slide.scrollTop = 0;
+                } else {
+                    slide.classList.remove('slide-active');
+                    slide.classList.add('slide-hidden');
+                }
+            }
+            document.getElementById('slide-counter').innerText = `${currentSlide + 1} / ${totalSlides}`;
+            
+            // Update button states
+            document.getElementById('btn-prev').disabled = currentSlide === 0;
+            document.getElementById('btn-next').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        }
+
+        // Navegação por Teclado
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Inicializa estado dos botões de slide
+        updateSlides();
+
+    </script>
+</body>
+</html>
