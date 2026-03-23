@@ -3,71 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação ATPCA - Computação</title>
-    <!-- Tailwind CSS para Estilização -->
+    <title>Apresentação ATPCA - Ciências Humanas</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons para os ícones vetoriais -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            background-color: #111827; /* gray-900 */
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            user-select: none;
-        }
-        /* Contêiner Base agora ocupa 100% do espaço disponível */
-        #presentation-wrapper {
-            width: 100vw;
-            height: 100vh;
-            background-color: white;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-        .slide {
-            position: absolute;
-            top: 0.5rem; /* Abaixo da barra colorida */
-            left: 0;
-            right: 0;
-            bottom: 0;
-            transition: opacity 0.3s ease-in-out;
-            background-color: white;
-            /* Permite rolagem se a tela for muito pequena, evitando que o conteúdo suma */
-            overflow-y: auto; 
-            overflow-x: hidden;
-        }
-        .slide-active {
-            opacity: 1;
-            z-index: 10;
-            pointer-events: auto;
-        }
-        .slide-hidden {
-            opacity: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-        /* Overlay de Controles */
-        #controls-overlay {
-            position: fixed;
-            bottom: 1rem;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            display: flex;
-            justify-content: center;
-            opacity: 0; /* Alterado de 0.3 para 0 para sumir completamente */
-            transition: opacity 0.3s ease;
-        }
-        #controls-overlay:hover {
-            opacity: 1;
-        }
-        /* Custom scrollbar for slides */
+        body { background-color: #111827; margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; user-select: none; }
+        #presentation-wrapper { width: 100vw; height: 100vh; background-color: white; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .slide { position: absolute; top: 0.5rem; left: 0; right: 0; bottom: 0; transition: opacity 0.3s ease-in-out; background-color: white; overflow-y: auto; overflow-x: hidden; }
+        .slide-active { opacity: 1; z-index: 10; pointer-events: auto; }
+        .slide-hidden { opacity: 0; z-index: 0; pointer-events: none; }
+        #controls-overlay { position: fixed; bottom: 1rem; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+        #controls-overlay:hover { opacity: 1; }
         .slide::-webkit-scrollbar { width: 8px; }
         .slide::-webkit-scrollbar-track { background: #f1f5f9; }
         .slide::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
@@ -75,9 +21,7 @@
     </style>
 </head>
 <body>
-
     <div id="presentation-wrapper">
-        <!-- Top Bar Colorida -->
         <div class="h-2 w-full flex shrink-0 fixed top-0 z-50">
             <div class="w-1/4 bg-blue-900"></div>
             <div class="w-1/4 bg-green-600"></div>
@@ -85,13 +29,12 @@
             <div class="w-1/4 bg-red-600"></div>
         </div>
 
-        <!-- Área dos Slides -->
         <div class="flex-1 relative w-full h-full" id="slides-container">
             
             <!-- SLIDE 1: Capa -->
             <div class="slide slide-active bg-gray-50 p-6 md:p-12 flex flex-col justify-between" id="slide-0">
                 <div class="mt-4 md:mt-0 z-10 relative">
-                    <h3 class="text-blue-900 font-bold tracking-widest text-xs md:text-sm mb-4 md:mb-6 uppercase">Formação Continuada</h3>
+                    <h3 class="text-blue-900 font-bold tracking-widest text-xs md:text-sm mb-4 md:mb-6 uppercase">Formação Continuada - Ciências Humanas</h3>
                     <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-4 max-w-3xl">
                         A Importância do Ensino de Computação como Potencializador da Educação Básica
                     </h1>
@@ -99,10 +42,9 @@
                         <i data-lucide="monitor-play" class="w-5 h-5 mr-2 shrink-0"></i>
                         <span>ATPCA - Professores da Rede Estadual de São Paulo</span>
                     </div>
-                    <p class="text-slate-500 mt-4 text-base md:text-lg">Lençóis Paulista, SP</p>
+                    <p class="text-slate-500 mt-4 text-base md:text-lg">URE Bauru, SP</p>
                 </div>
 
-                <!-- Abstract Graphic -->
                 <div class="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-96 h-96 opacity-30 md:opacity-100">
                     <div class="absolute top-0 right-10 text-green-500"><i data-lucide="brain-circuit" class="w-32 h-32 md:w-40 md:h-40 stroke-[1.5]"></i></div>
                     <div class="absolute top-10 right-40 text-blue-800"><i data-lucide="network" class="w-24 h-24 md:w-32 md:h-32 stroke-[1.5]"></i></div>
@@ -122,14 +64,14 @@
                         <div class="bg-blue-100 p-3 rounded-full text-blue-900"><i data-lucide="target" class="w-6 h-6"></i></div>
                         <div>
                             <p class="font-bold text-slate-800">Público</p>
-                            <p class="text-slate-600 text-sm">Professores da Rede</p>
+                            <p class="text-slate-600 text-sm">Prof. Ciências Humanas</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
                         <div class="bg-blue-100 p-3 rounded-full text-blue-900"><i data-lucide="calendar" class="w-6 h-6"></i></div>
                         <div>
                             <p class="font-bold text-slate-800">Data</p>
-                            <p class="text-slate-600 text-sm">23 de Março de 2026</p>
+                            <p class="text-slate-600 text-sm">26 de Março de 2026</p>
                         </div>
                     </div>
                 </div>
@@ -138,13 +80,11 @@
             <!-- SLIDE 2: Introdução -->
             <div class="slide slide-hidden p-6 md:p-12 flex flex-col justify-center" id="slide-1">
                 <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-7xl mx-auto w-full pb-16 md:pb-0">
-                    <!-- Left Column -->
                     <div class="w-full lg:w-1/3 flex flex-col justify-center">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-2">Abertura e Boas-vindas</h2>
                         <p class="text-slate-600 mb-6 font-medium text-base md:text-lg">O que é Ensino de Computação?</p>
-                        
                         <div class="bg-blue-50 rounded-2xl p-5 md:p-6 border-l-4 border-blue-900">
-                            <p class="text-slate-700 mb-6 text-sm md:text-base">Desmistificando o tema para além dos laboratórios de informática em Lençóis Paulista.</p>
+                            <p class="text-slate-700 mb-6 text-sm md:text-base">Desmistificando o tema para além dos laboratórios de informática na URE Bauru.</p>
                             <div class="space-y-4">
                                 <div class="flex gap-3 items-start">
                                     <i data-lucide="help-circle" class="w-6 h-6 text-blue-900 flex-shrink-0 mt-1"></i>
@@ -152,13 +92,11 @@
                                 </div>
                                 <div class="flex gap-3 items-start">
                                     <i data-lucide="help-circle" class="w-6 h-6 text-blue-900 flex-shrink-0 mt-1"></i>
-                                    <p class="text-slate-800 font-semibold text-base md:text-lg">E se não fossemos letrados?</p>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">E se não fossemos letrados digitalmente?</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Right Column -->
                     <div class="w-full lg:w-2/3 flex flex-col justify-center lg:pl-8">
                         <div class="mb-8 md:mb-10">
                             <h2 class="text-xl md:text-2xl font-bold text-slate-800 flex items-center gap-3 mb-4">
@@ -168,7 +106,6 @@
                                 Não é apenas ensinar a usar o Word ou Excel. É um conjunto de conhecimentos, práticas e valores que permitem ao aluno <strong>compreender, utilizar e criar</strong> tecnologias digitais de forma crítica.
                             </p>
                         </div>
-
                         <div>
                             <h2 class="text-xl md:text-2xl font-bold text-slate-800 flex items-center gap-3 mb-4">
                                 <i data-lucide="brain-circuit" class="text-orange-600 w-6 h-6 md:w-8 md:h-8"></i> O Pensamento Computacional
@@ -178,7 +115,7 @@
                             </p>
                             <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 md:p-5 relative shadow-sm">
                                 <p class="text-orange-900 text-base md:text-lg italic font-medium">
-                                    "O pensamento computacional é um processo cognitivo para formulação e resolução de problemas que inclui formular problemas e suas soluções de forma que as soluções possam ser representadas como sequências de passos e algoritmos."
+                                    "O pensamento computacional é um processo cognitivo para formulação e resolução de problemas..."
                                 </p>
                                 <p class="text-right text-orange-700 font-bold mt-2 text-xs md:text-sm">— Jeannette Wing (2006)</p>
                             </div>
@@ -194,9 +131,7 @@
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">Os 4 Pilares do Pensamento Computacional</h2>
                         <p class="text-slate-600 mt-2 text-base md:text-lg">Processo cognitivo para formulação e resolução de problemas</p>
                     </div>
-
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 flex-1 min-h-0">
-                        <!-- Pillar 1 -->
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
@@ -207,8 +142,6 @@
                             </div>
                             <p class="text-slate-600 text-sm md:text-base lg:text-lg">Capacidade de quebrar problemas complexos em partes menores e mais gerenciáveis, facilitando a resolução passo a passo.</p>
                         </div>
-
-                        <!-- Pillar 2 -->
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
@@ -219,8 +152,6 @@
                             </div>
                             <p class="text-slate-600 text-sm md:text-base lg:text-lg">Identificar tendências, semelhanças e repetições dentro de problemas ou dados para aplicar soluções já conhecidas.</p>
                         </div>
-
-                        <!-- Pillar 3 -->
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
@@ -231,8 +162,6 @@
                             </div>
                             <p class="text-slate-600 text-sm md:text-base lg:text-lg">Habilidade de filtrar o que é essencial e ignorar detalhes irrelevantes, focando apenas no que importa para a solução.</p>
                         </div>
-
-                        <!-- Pillar 4 -->
                         <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                             <div class="flex justify-between items-start mb-2 md:mb-3">
                                 <div class="flex items-center gap-3">
@@ -259,7 +188,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="bg-blue-900 text-white rounded-2xl p-4 md:p-5 mb-5 flex flex-col md:flex-row items-start md:items-center justify-between shadow-md relative overflow-hidden shrink-0">
                         <div class="z-10 w-full md:w-2/3 mb-4 md:mb-0">
                             <h3 class="font-bold text-lg md:text-xl flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5"></i> Parecer CNE/CEB nº 2/2022</h3>
@@ -271,9 +199,7 @@
                         </div>
                         <div class="absolute right-[-20px] bottom-[-20px] opacity-10 hidden md:block"><i data-lucide="book-open" class="w-32 h-32"></i></div>
                     </div>
-
                     <div class="flex flex-col lg:flex-row gap-4 md:gap-6 flex-1 min-h-0 shrink-0">
-                        <!-- Grafico 1 -->
                         <div class="w-full lg:w-1/2 border border-gray-200 rounded-2xl p-4 md:p-5 flex flex-col">
                             <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2 text-base md:text-lg">
                                 <i data-lucide="network" class="text-blue-900 w-5 h-5"></i> Infraestrutura vs. Prática
@@ -291,8 +217,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Grafico 2 -->
                         <div class="w-full lg:w-1/2 border border-gray-200 rounded-2xl p-4 md:p-5 flex flex-col">
                             <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2 text-base md:text-lg">
                                 <i data-lucide="users" class="text-orange-600 w-5 h-5"></i> Formação Docente Específica
@@ -309,7 +233,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="mt-4 bg-green-50 border border-green-200 text-green-900 p-3 md:p-4 rounded-xl flex items-start sm:items-center gap-3 shrink-0">
                         <i data-lucide="check-circle-2" class="w-6 h-6 text-green-600 flex-shrink-0 mt-1 sm:mt-0"></i>
                         <p class="text-sm md:text-base"><strong>Conclusão para nós professores:</strong> O momento atual é de transição e formação! Por isso estamos realizando este ATPCA.</p>
@@ -324,9 +247,7 @@
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">Fundamentos: BNCC e Construcionismo</h2>
                         <p class="text-slate-600 mt-1 text-base md:text-lg">Do consumo passivo de tecnologia à autoria e criação de conhecimento</p>
                     </div>
-
                     <div class="flex flex-col lg:flex-row gap-4 md:gap-6 mb-5 flex-1">
-                        <!-- BNCC -->
                         <div class="w-full lg:w-1/2 flex flex-col">
                             <div class="bg-blue-900 text-white p-3 rounded-t-xl flex items-center gap-3">
                                 <i data-lucide="book-open" class="w-5 h-5 shrink-0"></i>
@@ -345,15 +266,11 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- Arrows -->
                         <div class="flex flex-row lg:flex-col justify-center text-gray-300 gap-2 md:gap-0 py-2 lg:py-0 shrink-0">
                             <i data-lucide="chevron-down" class="block lg:hidden w-8 h-8 mx-auto"></i>
                             <i data-lucide="chevron-left" class="hidden lg:block -mb-4 w-8 h-8"></i>
                             <i data-lucide="chevron-right" class="hidden lg:block w-8 h-8"></i>
                         </div>
-
-                        <!-- Construcionismo -->
                         <div class="w-full lg:w-1/2 flex flex-col">
                             <div class="bg-orange-500 text-white p-3 rounded-t-xl flex items-center gap-3">
                                 <i data-lucide="lightbulb" class="w-5 h-5 shrink-0"></i>
@@ -380,7 +297,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="bg-green-50 border border-green-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
                         <div class="bg-green-600 p-2 md:p-3 rounded-full text-white shrink-0">
                             <i data-lucide="users" class="w-5 h-5 md:w-6 md:h-6"></i>
@@ -400,7 +316,6 @@
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">O Ensino de Computação como Potencializador</h2>
                         <p class="text-slate-600 mt-1 text-base md:text-lg">Habilidades transversais aplicáveis em qualquer disciplina</p>
                     </div>
-
                     <div class="flex flex-col gap-6 flex-1 justify-center">
                         <div class="bg-blue-50 border border-blue-100 p-5 md:p-8 rounded-2xl flex flex-col sm:flex-row items-start gap-4 md:gap-6 shadow-sm">
                             <div class="bg-blue-900 p-3 md:p-4 rounded-xl text-white shadow-md shrink-0">
@@ -416,7 +331,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="bg-green-50 border border-green-100 p-5 md:p-8 rounded-2xl flex flex-col sm:flex-row items-start gap-4 md:gap-6 shadow-sm">
                             <div class="bg-green-600 p-3 md:p-4 rounded-xl text-white shadow-md shrink-0">
                                 <i data-lucide="network" class="w-8 h-8 md:w-10 md:h-10"></i>
@@ -461,7 +375,7 @@
                             <div>
                                 <h3 class="font-bold text-lg md:text-xl text-slate-800 mb-1">O Território Dataficado <span class="block sm:inline text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded w-fit mt-1 sm:mt-0">(Geografia/Sociologia)</span></h3>
                                 <p class="text-slate-600 text-sm md:text-base mb-2">Como o Geoprocessamento e a mineração de dados alteram o estudo da ocupação urbana e do meio ambiente.</p>
-                                <p class="text-green-700 text-xs md:text-sm font-medium bg-green-50 inline-block px-2 py-1 rounded">📌 Mapeamento das margens do Rio Lençóis usando satélite.</p>
+                                <p class="text-green-700 text-xs md:text-sm font-medium bg-green-50 inline-block px-2 py-1 rounded">📌 Mapeamento das margens do Rio Bauru usando satélite.</p>
                             </div>
                         </div>
 
@@ -484,7 +398,7 @@
                 </div>
             </div>
 
-            <!-- SLIDE 8: Atividade Interativa com Cronômetro -->
+            <!-- SLIDE 8: Atividade Interativa -->
             <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-7">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-4 flex items-center gap-3 shrink-0">
@@ -496,7 +410,6 @@
                     </p>
 
                     <div class="flex flex-col lg:flex-row gap-6 flex-1 min-h-0">
-                        <!-- Dossiê -->
                         <div class="w-full lg:w-1/2 bg-amber-50 rounded-2xl border-2 border-amber-200 p-4 md:p-6 relative overflow-hidden flex flex-col shadow-inner">
                             <div class="absolute top-2 right-2 md:top-4 md:right-4 border-2 border-red-500 text-red-500 font-bold py-1 px-2 md:px-3 transform rotate-12 opacity-80 rounded text-xs md:text-sm">EM ANÁLISE</div>
                             <h3 class="font-bold text-xl md:text-2xl text-amber-900 mb-4 md:mb-6 flex items-center gap-2">
@@ -506,7 +419,7 @@
                             <div class="space-y-3 md:space-y-4 text-amber-900 flex-1 text-sm md:text-base">
                                 <div class="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-3 items-start">
                                     <strong class="text-amber-800">Local:</strong>
-                                    <span>Bairro Periférico de Lençóis Paulista</span>
+                                    <span>Bairro Periférico na URE Bauru</span>
                                 </div>
                                 <div class="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-3 items-start">
                                     <strong class="text-amber-800">Problema:</strong>
@@ -524,7 +437,6 @@
                             </div>
                         </div>
 
-                        <!-- Missão & Timer -->
                         <div class="w-full lg:w-1/2 flex flex-col justify-between gap-4">
                             <div>
                                 <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 text-center">Sua Missão: O Júri</h3>
@@ -535,7 +447,7 @@
                                         <div class="bg-blue-900 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shrink-0">1</div>
                                         <div>
                                             <h4 class="font-bold text-blue-900 text-sm md:text-base">Levantar Hipóteses (Abstração)</h4>
-                                            <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Por que o número de solicitações é baixo?</p>
+                                            <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Por que o número de solicitações é baixo? Faltam pessoas ou tecnologia?</p>
                                         </div>
                                     </div>
                                     
@@ -543,7 +455,7 @@
                                         <div class="bg-red-600 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shrink-0">2</div>
                                         <div>
                                             <h4 class="font-bold text-red-700 text-sm md:text-base">Identificar o Viés da Máquina</h4>
-                                            <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Qual padrão o algoritmo ignorou?</p>
+                                            <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Qual padrão o algoritmo ignorou? (Exclusão digital, áreas de sombra na URE Bauru).</p>
                                         </div>
                                     </div>
 
@@ -551,13 +463,12 @@
                                         <div class="bg-green-600 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shrink-0">3</div>
                                         <div>
                                             <h4 class="font-bold text-green-800 text-sm md:text-base">Propor Critérios Justos</h4>
-                                            <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Reformule a lógica: que outros dados usar?.</p>
+                                            <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Reformule a lógica: que outros dados usar? (Ex: catraca).</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Timer Widget -->
                             <div class="mt-2 md:mt-4 bg-slate-800 text-white p-4 rounded-xl flex flex-col sm:flex-row items-center justify-between shadow-xl gap-4">
                                 <div class="flex items-center gap-3 md:gap-4">
                                     <i data-lucide="clock" class="text-blue-400 w-6 h-6 md:w-8 md:h-8 shrink-0"></i>
@@ -594,7 +505,6 @@
                     </div>
 
                     <div class="flex flex-col lg:flex-row gap-6 md:gap-8 flex-1 min-h-0">
-                        <!-- Left Column -->
                         <div class="w-full lg:w-1/2 flex flex-col gap-3 md:gap-4">
                             <h3 class="font-bold text-lg md:text-xl text-blue-900 flex items-center gap-2 mb-1"><i data-lucide="check-circle-2" class="w-5 h-5 shrink-0"></i> Mensagens-Chave</h3>
                             
@@ -623,7 +533,6 @@
                             </div>
                         </div>
 
-                        <!-- Right Column -->
                         <div class="w-full lg:w-1/2 bg-white rounded-2xl shadow-md border border-gray-200 p-6 md:p-8 flex flex-col">
                             <h3 class="font-bold text-lg md:text-xl text-slate-800 flex items-center gap-2 mb-4 md:mb-6"><i data-lucide="target" class="text-orange-500 w-5 h-5 md:w-6 md:h-6 shrink-0"></i> Próximos Passos Práticos</h3>
                             
@@ -678,10 +587,7 @@
     </div> <!-- /presentation-wrapper -->
 
     <script>
-        // Inicializa ícones Lucide
         lucide.createIcons();
-
-        // Lógica de Slides
         let currentSlide = 0;
         const totalSlides = 9;
 
@@ -691,7 +597,6 @@
                 if (i === currentSlide) {
                     slide.classList.remove('slide-hidden');
                     slide.classList.add('slide-active');
-                    // Rola pro topo suavemente quando muda de slide
                     slide.scrollTop = 0;
                 } else {
                     slide.classList.remove('slide-active');
@@ -699,35 +604,20 @@
                 }
             }
             document.getElementById('slide-counter').innerText = `${currentSlide + 1} / ${totalSlides}`;
-            
-            // Update button states
             document.getElementById('btn-prev').disabled = currentSlide === 0;
             document.getElementById('btn-next').disabled = currentSlide === totalSlides - 1;
         }
 
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateSlides();
-            }
-        }
+        function nextSlide() { if (currentSlide < totalSlides - 1) { currentSlide++; updateSlides(); } }
+        function prevSlide() { if (currentSlide > 0) { currentSlide--; updateSlides(); } }
 
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateSlides();
-            }
-        }
-
-        // Navegação por Teclado
         window.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
             if (e.key === 'ArrowLeft') prevSlide();
         });
 
-        // Lógica do Cronômetro
         let timerInterval;
-        let initialTimeLeft = 600; // 10 minutos padrão
+        let initialTimeLeft = 600; 
         let timeLeft = initialTimeLeft;
         let isTimerRunning = false;
         const timerDisplay = document.getElementById('timer-display');
@@ -740,9 +630,7 @@
             return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
         }
 
-        function updateTimerDisplay() {
-            timerDisplay.innerText = formatTime(timeLeft);
-        }
+        function updateTimerDisplay() { timerDisplay.innerText = formatTime(timeLeft); }
 
         function editTimer() {
             if (isTimerRunning) return;
@@ -759,53 +647,38 @@
             try {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
                 const ctx = new AudioContext();
-                
-                // Toca 3 bipes
                 for (let i = 0; i < 3; i++) {
                     setTimeout(() => {
                         const osc = ctx.createOscillator();
                         const gainNode = ctx.createGain();
-                        
-                        osc.type = 'triangle'; // Som suave mas alerta
+                        osc.type = 'triangle'; 
                         osc.frequency.setValueAtTime(600, ctx.currentTime);
-                        
                         gainNode.gain.setValueAtTime(0.5, ctx.currentTime);
                         gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
-                        
                         osc.connect(gainNode);
                         gainNode.connect(ctx.destination);
-                        
                         osc.start();
                         osc.stop(ctx.currentTime + 0.5);
-                    }, i * 500); // Um bipe a cada 500ms
+                    }, i * 500);
                 }
-            } catch(e) {
-                console.log("Áudio não suportado no navegador.");
-            }
+            } catch(e) { console.log("Áudio não suportado."); }
         }
 
         function toggleTimer() {
             if (isTimerRunning) {
-                // Pausar
                 clearInterval(timerInterval);
                 isTimerRunning = false;
                 timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar';
                 timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
                 timerEditBtn.style.display = 'block';
             } else {
-                // Iniciar
                 isTimerRunning = true;
                 timerBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 md:w-5 md:h-5"></i> Pausar';
                 timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
-                timerEditBtn.style.display = 'none'; // Esconde o lápis enquanto o tempo roda
+                timerEditBtn.style.display = 'none'; 
                 timerInterval = setInterval(() => {
-                    if (timeLeft > 0) {
-                        timeLeft--;
-                        updateTimerDisplay();
-                    } else {
-                        toggleTimer(); // Para no zero
-                        playAlarm();   // Toca o alarme sonoro
-                    }
+                    if (timeLeft > 0) { timeLeft--; updateTimerDisplay(); } 
+                    else { toggleTimer(); playAlarm(); }
                 }, 1000);
             }
             lucide.createIcons();
@@ -814,7 +687,7 @@
         function resetTimer() {
             clearInterval(timerInterval);
             isTimerRunning = false;
-            timeLeft = initialTimeLeft; // Volta para o tempo que você configurou
+            timeLeft = initialTimeLeft; 
             updateTimerDisplay();
             timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar';
             timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
@@ -822,9 +695,7 @@
             lucide.createIcons();
         }
 
-        // Inicializa estado dos botões de slide
         updateSlides();
-
     </script>
 </body>
 </html>
