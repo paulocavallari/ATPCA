@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação ATPCA - Ciências Humanas</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { background-color: #111827; margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; user-select: none; }
@@ -22,6 +24,7 @@
 </head>
 <body>
     <div id="presentation-wrapper">
+        <!-- Top Bar Colorida -->
         <div class="h-2 w-full flex shrink-0 fixed top-0 z-50">
             <div class="w-1/4 bg-blue-900"></div>
             <div class="w-1/4 bg-green-600"></div>
@@ -29,6 +32,7 @@
             <div class="w-1/4 bg-red-600"></div>
         </div>
 
+        <!-- Área dos Slides -->
         <div class="flex-1 relative w-full h-full" id="slides-container">
             
             <!-- SLIDE 1: Capa -->
@@ -88,11 +92,11 @@
                             <div class="space-y-4">
                                 <div class="flex gap-3 items-start">
                                     <i data-lucide="help-circle" class="w-6 h-6 text-blue-900 flex-shrink-0 mt-1"></i>
-                                    <p class="text-slate-800 font-semibold text-base md:text-lg">Onde poderíamos chegar se não fossemos alfabetizados?</p>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">Onde poderíamos chegar se não fôssemos alfabetizados?</p>
                                 </div>
                                 <div class="flex gap-3 items-start">
                                     <i data-lucide="help-circle" class="w-6 h-6 text-blue-900 flex-shrink-0 mt-1"></i>
-                                    <p class="text-slate-800 font-semibold text-base md:text-lg">E se não fossemos letrados digitalmente?</p>
+                                    <p class="text-slate-800 font-semibold text-base md:text-lg">E se não fôssemos letrados digitalmente?</p>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +180,7 @@
                 </div>
             </div>
 
-            <!-- SLIDE 4: Dados -->
+            <!-- SLIDE 4: Dados Iniciais -->
             <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-3">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-4 shrink-0">
@@ -240,8 +244,56 @@
                 </div>
             </div>
 
-            <!-- SLIDE 5: BNCC -->
-            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-4">
+            <!-- SLIDE 5: Cenário de 2025 (Novo Slide) -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-4">
+                <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
+                    <div class="mb-6 shrink-0">
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">O Cenário Atual: Dados de 2025</h2>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-end mt-1 gap-2">
+                            <p class="text-slate-600 text-base md:text-lg">A infraestrutura chegou. O gargalo agora é a integração pedagógica.</p>
+                            <div class="flex items-center gap-2 text-xs md:text-sm text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded-full">
+                                <i data-lucide="bar-chart-horizontal" class="w-4 h-4"></i> Dados: CIEB & Cetic.br (2025)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-6 flex-1 min-h-0">
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="wifi" class="text-green-500 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">97%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">Infraestrutura e Conectividade</p>
+                            <p class="text-slate-600 text-sm md:text-base">Das escolas da rede possuem banda larga e laboratórios instalados (Avanço significativo no pós-pandemia até 2025).</p>
+                        </div>
+
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="split-square-horizontal" class="text-orange-500 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">28%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">O Gargalo da Integração</p>
+                            <p class="text-slate-600 text-sm md:text-base">Apenas 28% dos projetos de tecnologia nas escolas dialogam diretamente com os currículos de outras disciplinas (Geografia, História).</p>
+                        </div>
+
+                        <div class="w-full lg:w-1/3 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10"></div>
+                            <i data-lucide="brain-circuit" class="text-blue-600 w-10 h-10 mb-4"></i>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-2">65%</h3>
+                            <p class="font-bold text-slate-700 text-lg mb-2">Demanda do Mercado (2025)</p>
+                            <p class="text-slate-600 text-sm md:text-base">Das novas vagas exigem não apenas o uso da tecnologia, mas habilidades de "resolução de problemas complexos" via IA e automação.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-slate-800 text-white p-5 rounded-xl flex items-start sm:items-center gap-4 shrink-0 shadow-lg border-l-4 border-blue-500">
+                        <i data-lucide="target" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1 sm:mt-0"></i>
+                        <div>
+                            <p class="text-base md:text-lg"><strong>Nossa Meta:</strong> Virar o jogo dos 28%. A tecnologia não pode ser uma "ilha" cercada por um currículo tradicional. Ela deve permear a nossa análise crítica da sociedade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 6: BNCC -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-5">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="text-center mb-6 shrink-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">Fundamentos: BNCC e Construcionismo</h2>
@@ -309,8 +361,8 @@
                 </div>
             </div>
 
-            <!-- SLIDE 6: Potencializador -->
-            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-5">
+            <!-- SLIDE 7: Potencializador (Geral) -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-6">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-6 shrink-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">O Ensino de Computação como Potencializador</h2>
@@ -349,13 +401,12 @@
                 </div>
             </div>
 
-            <!-- SLIDE 7: Humanidades -->
-            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-6">
+            <!-- SLIDE 8: Humanidades -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-7">
                 <div class="max-w-7xl mx-auto w-full h-full flex flex-col lg:flex-row gap-8 pb-16 md:pb-0">
                     <div class="w-full lg:w-1/3 flex flex-col justify-center">
                         <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-5 leading-tight">Computação como<br><span class="text-red-600">Potencializador</span><br>das Humanidades</h2>
                         <p class="text-slate-600 mb-6 text-base md:text-lg">Como as ferramentas digitais transformam a análise social, geográfica e histórica.</p>
-                        
                         <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-gray-200 mb-6 hidden md:block">
                             <div class="text-red-600 font-bold text-base md:text-lg mb-2 md:mb-3 border-b-2 border-red-100 pb-2">Transversalidade</div>
                             <div class="flex items-center gap-3 text-slate-700 font-medium text-sm md:text-base mt-3 md:mt-4">
@@ -363,12 +414,10 @@
                                 Do abstrato ao concreto: visualizando dados invisíveis
                             </div>
                         </div>
-
                         <div class="text-xs md:text-sm italic text-slate-500 border-l-4 border-slate-300 pl-4 mt-auto">
                             "A missão das Ciências Humanas é garantir que a soberania tecnológica esteja subordinada aos direitos humanos e à ética social."
                         </div>
                     </div>
-
                     <div class="w-full lg:w-2/3 flex flex-col justify-center gap-4 md:gap-5">
                         <div class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border-l-8 border-green-500 flex items-start gap-4">
                             <i data-lucide="map" class="w-8 h-8 md:w-10 md:h-10 text-green-600 flex-shrink-0 mt-1 md:mt-0"></i>
@@ -378,7 +427,6 @@
                                 <p class="text-green-700 text-xs md:text-sm font-medium bg-green-50 inline-block px-2 py-1 rounded">📌 Mapeamento das margens do Rio Bauru usando satélite.</p>
                             </div>
                         </div>
-
                         <div class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border-l-8 border-orange-500 flex items-start gap-4">
                             <i data-lucide="shield-alert" class="w-8 h-8 md:w-10 md:h-10 text-orange-600 flex-shrink-0 mt-1 md:mt-0"></i>
                             <div>
@@ -386,7 +434,6 @@
                                 <p class="text-slate-600 text-sm md:text-base">Compreensão de que algoritmos não são neutros. Análise de bolhas de filtro que polarizam a sociedade e perpetuam preconceitos.</p>
                             </div>
                         </div>
-
                         <div class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border-l-8 border-blue-600 flex items-start gap-4">
                             <i data-lucide="briefcase" class="w-8 h-8 md:w-10 md:h-10 text-blue-600 flex-shrink-0 mt-1 md:mt-0"></i>
                             <div>
@@ -398,8 +445,8 @@
                 </div>
             </div>
 
-            <!-- SLIDE 8: Atividade Interativa -->
-            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-7">
+            <!-- SLIDE 9: Atividade Interativa -->
+            <div class="slide slide-hidden p-6 md:p-12 flex flex-col" id="slide-8">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-4 flex items-center gap-3 shrink-0">
                         <div class="bg-red-100 p-2 rounded-lg shrink-0"><i data-lucide="alert-triangle" class="text-red-600 w-5 h-5 md:w-6 md:h-6"></i></div>
@@ -415,7 +462,6 @@
                             <h3 class="font-bold text-xl md:text-2xl text-amber-900 mb-4 md:mb-6 flex items-center gap-2">
                                 <i data-lucide="database" class="w-5 h-5 md:w-6 md:h-6 shrink-0"></i> Dossiê: Algoritmo "Rota Eficiente"
                             </h3>
-                            
                             <div class="space-y-3 md:space-y-4 text-amber-900 flex-1 text-sm md:text-base">
                                 <div class="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-3 items-start">
                                     <strong class="text-amber-800">Local:</strong>
@@ -430,7 +476,6 @@
                                     <span class="italic bg-white/70 p-2 rounded shadow-sm border border-amber-100 text-xs md:text-sm">"Baixa demanda registrada. O sistema mostra poucas solicitações de viagem nessa região."</span>
                                 </div>
                             </div>
-
                             <div class="mt-4 bg-amber-100 p-3 md:p-4 rounded-xl border border-amber-300 shadow-sm">
                                 <p class="font-bold flex items-center gap-2 mb-1 text-sm md:text-base"><i data-lucide="search" class="w-4 h-4"></i> Evidência Crucial (Dados):</p>
                                 <p class="text-xs md:text-sm text-amber-900 leading-relaxed">"O sistema baseia-se exclusivamente em solicitações feitas via <strong>Aplicativo Oficial</strong>, que requer internet 4G/5G constante."</p>
@@ -441,7 +486,6 @@
                             <div>
                                 <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 text-center">Sua Missão: O Júri</h3>
                                 <p class="text-slate-600 mb-4 text-center text-sm md:text-base">Usem o Pensamento Computacional para investigar o erro.</p>
-
                                 <div class="space-y-2 md:space-y-3">
                                     <div class="bg-blue-50 border border-blue-100 p-3 rounded-xl flex gap-3 items-center shadow-sm">
                                         <div class="bg-blue-900 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shrink-0">1</div>
@@ -450,7 +494,6 @@
                                             <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Por que o número de solicitações é baixo? Faltam pessoas ou tecnologia?</p>
                                         </div>
                                     </div>
-                                    
                                     <div class="bg-red-50 border border-red-100 p-3 rounded-xl flex gap-3 items-center shadow-sm">
                                         <div class="bg-red-600 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shrink-0">2</div>
                                         <div>
@@ -458,7 +501,6 @@
                                             <p class="text-slate-700 text-xs md:text-sm hidden sm:block">Qual padrão o algoritmo ignorou? (Exclusão digital, áreas de sombra na URE Bauru).</p>
                                         </div>
                                     </div>
-
                                     <div class="bg-green-50 border border-green-100 p-3 rounded-xl flex gap-3 items-center shadow-sm">
                                         <div class="bg-green-600 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shrink-0">3</div>
                                         <div>
@@ -468,7 +510,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="mt-2 md:mt-4 bg-slate-800 text-white p-4 rounded-xl flex flex-col sm:flex-row items-center justify-between shadow-xl gap-4">
                                 <div class="flex items-center gap-3 md:gap-4">
                                     <i data-lucide="clock" class="text-blue-400 w-6 h-6 md:w-8 md:h-8 shrink-0"></i>
@@ -476,9 +517,7 @@
                                         <span class="text-[10px] md:text-xs text-slate-400 font-bold tracking-wider uppercase">Tempo de Debate</span>
                                         <div class="flex items-center gap-2 justify-center sm:justify-start">
                                             <span id="timer-display" class="text-3xl md:text-4xl lg:text-5xl font-mono font-bold leading-none mt-1">10:00</span>
-                                            <button onclick="editTimer()" id="timer-edit-btn" class="mt-1 text-slate-500 hover:text-white transition-colors p-1" title="Editar Tempo">
-                                                <i data-lucide="pencil" class="w-4 h-4 md:w-5 md:h-5"></i>
-                                            </button>
+                                            <button onclick="editTimer()" id="timer-edit-btn" class="mt-1 text-slate-500 hover:text-white transition-colors p-1" title="Editar Tempo"><i data-lucide="pencil" class="w-4 h-4 md:w-5 md:h-5"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -496,14 +535,13 @@
                 </div>
             </div>
 
-            <!-- SLIDE 9: Fechamento -->
-            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-8">
+            <!-- SLIDE 10: Fechamento -->
+            <div class="slide slide-hidden bg-gray-50 p-6 md:p-12 flex flex-col" id="slide-9">
                 <div class="max-w-7xl mx-auto w-full flex flex-col h-full pb-16 md:pb-0">
                     <div class="mb-6 md:mb-8 shrink-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">Fechamento e Próximos Passos</h2>
                         <p class="text-slate-600 mt-1 text-base md:text-lg">Consolidando o aprendizado e definindo a rota de ação para a rede.</p>
                     </div>
-
                     <div class="flex flex-col lg:flex-row gap-6 md:gap-8 flex-1 min-h-0">
                         <div class="w-full lg:w-1/2 flex flex-col gap-3 md:gap-4">
                             <h3 class="font-bold text-lg md:text-xl text-blue-900 flex items-center gap-2 mb-1"><i data-lucide="check-circle-2" class="w-5 h-5 shrink-0"></i> Mensagens-Chave</h3>
@@ -515,7 +553,6 @@
                                     <p class="text-slate-600 text-xs md:text-sm mt-1">Não é um "extra". É um direito de aprendizagem essencial para a cidadania digital e garantido por lei.</p>
                                 </div>
                             </div>
-
                             <div class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
                                 <div class="bg-red-100 p-2 md:p-3 rounded-xl text-red-600 shrink-0 mt-1"><i data-lucide="shield-alert" class="w-5 h-5 md:w-6 md:h-6"></i></div>
                                 <div>
@@ -523,7 +560,6 @@
                                     <p class="text-slate-600 text-xs md:text-sm mt-1">O erro (bug) é uma oportunidade pedagógica. O Pensamento Computacional desenvolve tolerância à frustração.</p>
                                 </div>
                             </div>
-
                             <div class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
                                 <div class="bg-green-100 p-2 md:p-3 rounded-xl text-green-700 shrink-0 mt-1"><i data-lucide="network" class="w-5 h-5 md:w-6 md:h-6"></i></div>
                                 <div>
@@ -532,7 +568,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="w-full lg:w-1/2 bg-white rounded-2xl shadow-md border border-gray-200 p-6 md:p-8 flex flex-col">
                             <h3 class="font-bold text-lg md:text-xl text-slate-800 flex items-center gap-2 mb-4 md:mb-6"><i data-lucide="target" class="text-orange-500 w-5 h-5 md:w-6 md:h-6 shrink-0"></i> Próximos Passos Práticos</h3>
                             
@@ -555,7 +590,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="mt-6 md:mt-8 bg-blue-900 text-white rounded-2xl p-4 md:p-5 flex flex-col md:flex-row justify-between items-center text-center md:text-left shadow-lg shrink-0 gap-4">
                         <div>
                             <h3 class="text-lg md:text-xl font-bold mb-1">Desafio para a próxima ATPC</h3>
@@ -570,26 +604,19 @@
 
         </div> <!-- /Área dos Slides -->
 
-        <!-- Overlay Navigation Controls -->
         <div id="controls-overlay">
             <div class="bg-black/80 text-white px-4 md:px-6 py-2 md:py-3 rounded-full flex items-center gap-4 md:gap-8 backdrop-blur-md shadow-2xl border border-white/10">
-                <button onclick="prevSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-prev">
-                    <i data-lucide="chevron-left" class="w-6 h-6 md:w-8 md:h-8"></i>
-                </button>
-                <span class="text-sm md:text-lg font-medium tracking-widest text-gray-300 w-12 md:w-16 text-center select-none" id="slide-counter">
-                    1 / 9
-                </span>
-                <button onclick="nextSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-next">
-                    <i data-lucide="chevron-right" class="w-6 h-6 md:w-8 md:h-8"></i>
-                </button>
+                <button onclick="prevSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-prev"><i data-lucide="chevron-left" class="w-6 h-6 md:w-8 md:h-8"></i></button>
+                <span class="text-sm md:text-lg font-medium tracking-widest text-gray-300 w-12 md:w-16 text-center select-none" id="slide-counter">1 / 10</span>
+                <button onclick="nextSlide()" class="hover:text-blue-300 transition-colors focus:outline-none disabled:opacity-30 disabled:hover:text-white p-2" id="btn-next"><i data-lucide="chevron-right" class="w-6 h-6 md:w-8 md:h-8"></i></button>
             </div>
         </div>
-    </div> <!-- /presentation-wrapper -->
+    </div>
 
     <script>
         lucide.createIcons();
         let currentSlide = 0;
-        const totalSlides = 9;
+        const totalSlides = 10;
 
         function updateSlides() {
             for(let i = 0; i < totalSlides; i++) {
@@ -610,11 +637,7 @@
 
         function nextSlide() { if (currentSlide < totalSlides - 1) { currentSlide++; updateSlides(); } }
         function prevSlide() { if (currentSlide > 0) { currentSlide--; updateSlides(); } }
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-        });
+        window.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide(); if (e.key === 'ArrowLeft') prevSlide(); });
 
         let timerInterval;
         let initialTimeLeft = 600; 
@@ -624,14 +647,8 @@
         const timerBtn = document.getElementById('timer-btn');
         const timerEditBtn = document.getElementById('timer-edit-btn');
 
-        function formatTime(seconds) {
-            const m = Math.floor(seconds / 60);
-            const s = seconds % 60;
-            return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-        }
-
-        function updateTimerDisplay() { timerDisplay.innerText = formatTime(timeLeft); }
-
+        function formatTime(seconds) { const m = Math.floor(seconds / 60); const s = seconds % 60; return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`; }
+        function updateTimerDisplay() { if(timerDisplay) timerDisplay.innerText = formatTime(timeLeft); }
         function editTimer() {
             if (isTimerRunning) return;
             const currentMins = Math.floor(initialTimeLeft / 60);
@@ -651,14 +668,11 @@
                     setTimeout(() => {
                         const osc = ctx.createOscillator();
                         const gainNode = ctx.createGain();
-                        osc.type = 'triangle'; 
-                        osc.frequency.setValueAtTime(600, ctx.currentTime);
+                        osc.type = 'triangle'; osc.frequency.setValueAtTime(600, ctx.currentTime);
                         gainNode.gain.setValueAtTime(0.5, ctx.currentTime);
                         gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
-                        osc.connect(gainNode);
-                        gainNode.connect(ctx.destination);
-                        osc.start();
-                        osc.stop(ctx.currentTime + 0.5);
+                        osc.connect(gainNode); gainNode.connect(ctx.destination);
+                        osc.start(); osc.stop(ctx.currentTime + 0.5);
                     }, i * 500);
                 }
             } catch(e) { console.log("Áudio não suportado."); }
@@ -668,18 +682,13 @@
             if (isTimerRunning) {
                 clearInterval(timerInterval);
                 isTimerRunning = false;
-                timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar';
-                timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
-                timerEditBtn.style.display = 'block';
+                if(timerBtn) { timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar'; timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md'; }
+                if(timerEditBtn) timerEditBtn.style.display = 'block';
             } else {
                 isTimerRunning = true;
-                timerBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 md:w-5 md:h-5"></i> Pausar';
-                timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
-                timerEditBtn.style.display = 'none'; 
-                timerInterval = setInterval(() => {
-                    if (timeLeft > 0) { timeLeft--; updateTimerDisplay(); } 
-                    else { toggleTimer(); playAlarm(); }
-                }, 1000);
+                if(timerBtn) { timerBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 md:w-5 md:h-5"></i> Pausar'; timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md'; }
+                if(timerEditBtn) timerEditBtn.style.display = 'none'; 
+                timerInterval = setInterval(() => { if (timeLeft > 0) { timeLeft--; updateTimerDisplay(); } else { toggleTimer(); playAlarm(); } }, 1000);
             }
             lucide.createIcons();
         }
@@ -689,9 +698,8 @@
             isTimerRunning = false;
             timeLeft = initialTimeLeft; 
             updateTimerDisplay();
-            timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar';
-            timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md';
-            timerEditBtn.style.display = 'block';
+            if(timerBtn) { timerBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 md:w-5 md:h-5"></i> Iniciar'; timerBtn.className = 'flex-1 sm:flex-none justify-center px-4 py-2 md:py-3 bg-green-500 hover:bg-green-600 text-green-950 rounded-lg font-bold flex items-center gap-2 transition-colors text-sm md:text-base shadow-md'; }
+            if(timerEditBtn) timerEditBtn.style.display = 'block';
             lucide.createIcons();
         }
 
@@ -699,3 +707,4 @@
     </script>
 </body>
 </html>
+```
